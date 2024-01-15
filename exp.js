@@ -58,9 +58,9 @@ const manipulateImage = (ctx)=>{
         let g = imageData.data[i+1];
         let b = imageData.data[i+2];
         let alpha = imageData.data[i+3];
-        if(r>150&&g>150&&b>150){
-            imageData.data[i] = 0; 
-            imageData.data[i+1] =0; 
+        if(r<150&&g>150&&b<150){
+            imageData.data[i] = 255; 
+            imageData.data[i+1] =255; 
             imageData.data[i+2] = 255; 
         }
     }
